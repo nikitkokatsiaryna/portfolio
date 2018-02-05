@@ -1,8 +1,23 @@
 @import url(styles-mixin);
 @import url(header-styles);
 @import url(expectections-styles);
+@import url(my-work-styles);
 
 body {
   margin: 0;
   min-width: 336px;
+}
+
+header {
+  display: flex;
+  position: relative;
+  .respond(wide-screen; { min-height: 672px; });
+  .respond(screen; { min-height: 768px; });
+}
+
+main {
+  .respond(wide-screen; { padding: 106px 248px 143px; });
+  .respond(screen; { padding: 106px 40px 143px; });
+  .respond(tablet; { padding: 82px 32px 88px; });
+  .respond(phone; { padding: 91px 16px 88px; });
 }
