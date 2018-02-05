@@ -2,10 +2,11 @@
 @import url(header-styles);
 @import url(expectections-styles);
 @import url(my-work-styles);
+@import url(footer-styles);
 
-body {
+* {
   margin: 0;
-  min-width: 336px;
+  padding: 0;
 }
 
 header {
@@ -20,4 +21,11 @@ main {
   .respond(screen; { padding: 106px 40px 143px; });
   .respond(tablet; { padding: 82px 32px 88px; });
   .respond(phone; { padding: 91px 16px 88px; });
+}
+
+footer {
+  .respond(wide-screen; { padding: 81px 248px 146px 248px; });
+  .respond(screen; { padding: 81px 40px 146px 40px; });
+  .respond(tablet; { padding: 82px 32px 88px 32px; });
+  .respond(phone; { padding: 33px 32px 110px 32px; });
 }
