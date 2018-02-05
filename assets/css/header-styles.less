@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  position: relative;
+  .respond(wide-screen; { min-height: 672px; });
+  .respond(screen; { min-height: 768px; });
+
+}
+
+.header-image {
+  width: 0;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/i5sJ2kCmYBI.jpg);
+
+  .respond(wide-screen; { flex-grow: 552; });
+  .respond(screen; { flex-grow: 424; });
+  .respond(tablet; { position: absolute; width: 384px; height: 384px; border-radius: 100%; left: 0; right: 0; top: 0; bottom: 0; margin-left: auto; margin-right: auto; margin-top: 224px; });
+  .respond(phone; { position: absolute; width: 144px; height: 144px; border-radius: 100%; left: 0; right: 0; top: 0; bottom: 0; margin-left: auto; margin-right: auto;});
+  @media screen and (max-device-width: 345px) {
+    margin-top: 168px;
+  }
+  @media screen and (min-device-width: 346px) and (max-device-width: 767px) {
+    margin-top: 128px;
+  }
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #082841;
+  color: #FFFFFF;
+
+  .respond(wide-screen; { justify-content: space-between; width: 0; padding: 65px 248px 89px 96px; flex-grow: 544; });
+  .respond(screen; { justify-content: space-between; width: 0; padding: 65px 41px 97px 95px; flex-grow: 464; });
+  .respond(tablet; { justify-content: normal; width: 100%; padding: 97px 112px 145px 112px; });
+  .respond(phone; { justify-content: normal; width: 100%; padding: 33px 16px 42px 15px; });
+}
+
+.header-text-top {
+  font-family: Helvetica-Bold, serif;
+  .respond(tablet; { margin-bottom: 498px; text-align: center; });
+  .respond(phone; { margin-bottom: 195px; text-align: center; });
+}
+
+.header-text-top .position {
+  .respond(phone; { font-size: 16px; line-height: 19px; });
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.header-text-top .name {
+  .respond(phone; { font-size: 32px; line-height: 40px; });
+  margin-top: 11px;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.header-text .header-text-description {
+  font-size: 20px;
+  line-height: 28px;
+  .respond(tablet; { text-align: center; });
+  .respond(phone; { font-size: 16px; line-height: 24px; text-align: center; });
+  justify-self: flex-start;
+  font-family: Georgia, serif;
+
+}
+
+
+
+
