@@ -14,23 +14,39 @@ footer {
 
 .information-block {
   display: flex;
+  .respond(mobile; { flex-direction: column; });
 }
 
 .information-block .information {
-  width: 304px;
-  margin-right: 112px;
+  .respond(wide-screen; { width: 304px; margin-right: 112px; });
+  .respond(screen; { width: 304px; margin-right: 96px; });
+  .respond(tablet; { display: flex; margin-bottom: 19px; justify-content: space-between; });
+  .respond(phone; { display: flex; flex-direction: column-reverse; margin-bottom: 19px; });
   font-family: Georgia, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  & .social-networks {
-    line-height: 32px;
+}
+
+.information-block .social-networks {
+  line-height: 32px;
+  .respond(tablet; { margin-right: 15%; });
+  .respond(phone; { margin-bottom: 34px; });
+  & a {
+    text-decoration: none;
     color: #DD3E18;
   }
 }
 
+.information-block .description {
+  .respond(tablet; { width: 60%; });
+}
+
+.information-block .social-links {
+  .respond(mobile; { display: none; });
+}
+
 .information-block .fields {
-  width: 0;
-  flex-grow: 1;
+  .respond(laptop; { width: 0; flex-grow: 1; });
 }
 
 footer .fields {
@@ -38,7 +54,8 @@ footer .fields {
   flex-direction: column;
 }
 
-footer .fields input {
+footer .fields input,
+footer .fields textarea {
   font-family: Georgia, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -51,4 +68,39 @@ footer .fields input {
   &:focus {
     border-color: rgba(0, 0, 0, 0.1);
   }
+
+}
+
+footer .fields textarea {
+  resize: none;
+  margin-bottom: 16px;
+}
+
+footer .fields input[type='file'] {
+  font-family: Helvetica-Bold sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #DD3E18;
+  margin-bottom: 32px;
+  padding: 0;
+}
+
+footer .fields input[type='submit'] {
+  font-family: Helvetica-Bold sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background-color: #DD3E18;
+}
+
+.social-networks div::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.1);
 }

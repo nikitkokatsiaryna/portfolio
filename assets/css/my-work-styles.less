@@ -142,23 +142,59 @@
   }
 }
 
-#work-btn-1:checked ~ .work-slider-controls label[for="work-btn-1"],
-#work-btn-2:checked ~ .work-slider-controls label[for="work-btn-2"],
-#work-btn-3:checked ~ .work-slider-controls label[for="work-btn-3"] {
+#work-btn-1-1:checked ~ .work-slider-controls label[for="work-btn-1-1"],
+#work-btn-1-2:checked ~ .work-slider-controls label[for="work-btn-1-2"],
+#work-btn-1-3:checked ~ .work-slider-controls label[for="work-btn-1-3"],
+#work-btn-2-1:checked ~ .work-slider-controls label[for="work-btn-2-1"],
+#work-btn-2-2:checked ~ .work-slider-controls label[for="work-btn-2-2"],
+#work-btn-2-3:checked ~ .work-slider-controls label[for="work-btn-2-3"],
+#work-btn-3-1:checked ~ .work-slider-controls label[for="work-btn-3-1"],
+#work-btn-3-2:checked ~ .work-slider-controls label[for="work-btn-3-2"],
+#work-btn-3-3:checked ~ .work-slider-controls label[for="work-btn-3-3"]{
   background-color: #000000;
 }
 
-#work-btn-1:checked ~ .work-slider-inner .work-slider-slides {
+#work-btn-1-1:checked ~ .work-slider-inner .work-slider-slides {
   transform: translateY(0);
   .respond(mobile; { transform: translate(0); });
 }
 
-#work-btn-2:checked ~ .work-slider-inner .work-slider-slides {
+#work-btn-1-2:checked ~ .work-slider-inner .work-slider-slides {
   transform: translateY(-101%);
   .respond(mobile; { transform: translate(-100%); });
 }
 
-#work-btn-3:checked ~ .work-slider-inner .work-slider-slides {
+#work-btn-1-3:checked ~ .work-slider-inner .work-slider-slides {
+  transform: translateY(-202%);
+  .respond(mobile; { transform: translate(-200%); });
+}
+
+#work-btn-2-1:checked ~ .work-slider-inner .work-slider-slides {
+  transform: translateY(0);
+  .respond(mobile; { transform: translate(0); });
+}
+
+#work-btn-2-2:checked ~ .work-slider-inner .work-slider-slides {
+  transform: translateY(-101%);
+  .respond(mobile; { transform: translate(-100%); });
+}
+
+#work-btn-2-3:checked ~ .work-slider-inner .work-slider-slides {
+  transform: translateY(-202%);
+  .respond(mobile; { transform: translate(-200%); });
+}
+
+#work-btn-3-1:checked ~ .work-slider-inner .work-slider-slides {
+  transform: translateY(0);
+  .respond(mobile; { transform: translate(0); });
+}
+
+#work-btn-3-2:checked ~ .work-slider-inner .work-slider-slides {
+  transform: translateY(-101%);
+  .respond(mobile; { transform: translate(-100%); });
+}
+
+#work-btn-3-3:checked ~ .work-slider-inner .work-slider-slides {
   transform: translateY(-202%);
   .respond(mobile; { transform: translate(-200%); });
 }
